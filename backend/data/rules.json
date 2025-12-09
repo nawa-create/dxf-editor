@@ -1,0 +1,32 @@
+[
+    {
+        "pattern": "(全て|すべて|全部)のエンティティを削除",
+        "operation": "delete_all",
+        "params": {},
+        "description": "全てのエンティティを削除"
+    },
+    {
+        "pattern": "^赤色.*削除$",
+        "operation": "delete_by_color",
+        "params": {
+            "color": 1
+        },
+        "description": "赤色のエンティティを削除"
+    },
+    {
+        "pattern": "^黄色.*削除$",
+        "operation": "delete_by_color",
+        "params": {
+            "color": 2
+        },
+        "description": "黄色のエンティティを削除"
+    },
+    {
+        "pattern": "^(寸法|dimension|DIM).*(削除|消す)",
+        "operation": "delete_by_layer",
+        "params": {
+            "layer": "DIM"
+        },
+        "description": "寸法線レイヤーを削除"
+    }
+]
