@@ -15,7 +15,7 @@ services:
       - key: ANTHROPIC_API_KEY
         sync: false  # Set this manually in Render dashboard
       - key: FRONTEND_URL
-        sync: false  # Set this after frontend is deployed
+        value: https://dxf-editor-frontend-v0i9.onrender.com
     healthCheckPath: /health
     autoDeploy: true
     rootDir: backend
@@ -28,7 +28,7 @@ services:
     staticPublishPath: dist
     envVars:
       - key: VITE_API_URL
-        sync: false  # Set this to backend URL
+        value: https://dxf-editor-api-v0i9.onrender.com
     headers:
       - path: /*
         name: Cache-Control
