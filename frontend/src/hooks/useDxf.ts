@@ -15,7 +15,7 @@ interface UseDxfReturn {
 
     // アクション
     uploadFile: (file: File) => Promise<void>;
-    interpretCommand: (text: string) => Promise<void>;
+    interpretCommand: (text: string, selectedParts?: string[]) => Promise<void>;
     previewOperation: (command: OperationCommand) => Promise<void>;
     executeOperation: () => Promise<void>;
     cancelOperation: () => void;
