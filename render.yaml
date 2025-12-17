@@ -21,8 +21,9 @@ services:
     rootDir: backend
 
   # Frontend (Static Site)
-  - type: static
+  - type: web
     name: dxf-editor-frontend
+    runtime: static
     buildCommand: npm install && npm run build
     staticPublishPath: dist
     envVars:
